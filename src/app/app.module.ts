@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { HomePage } from '../pages/home/home';
 import { UsersPage } from '../pages/users/users';
 import { UserDetailsPage } from '../pages/user-details/user-details';
 import { ReposPage } from '../pages/repos/repos';
@@ -16,6 +17,7 @@ import { GithubUsersProvider } from '../providers/github-users/github-users';
 @NgModule({
   declarations: [
     MyApp,
+    HomePage,
     UsersPage,
     UserDetailsPage,
     ReposPage,
@@ -29,6 +31,7 @@ import { GithubUsersProvider } from '../providers/github-users/github-users';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage,
     UsersPage,
     UserDetailsPage,
     ReposPage,
