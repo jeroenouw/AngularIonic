@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { User } from '../../models/user.model';
 import { GithubUsersProvider } from '../../providers/github-users/github-users';
+import { UserDetailsPage } from '../user-details/user-details';
 
 @Component({
   selector: 'page-users',
@@ -19,9 +20,8 @@ export class UsersPage {
         users => { this.users = users; })
   }
   
-  /*
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UsersPage');
-  }*/
+  goToDetails(login: string) {
+    this.navCtrl.push(UserDetailsPage, {login});
+  }
 
 }
