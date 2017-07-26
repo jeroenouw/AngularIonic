@@ -19,6 +19,12 @@ export class GithubUsersProvider {
       .get(`${this.baseUrl}/users`)
       .catch(this.handleError);
   }  
+
+  getUserDetails(login: string): Observable<User> {
+    return this.http
+      .get(`${this.baseUrl}/users/${login}`)
+      .catch(this.handleError);
+  }
   
   private handleError (error: any) {
     const errMsg = (error.message) ? error.message :

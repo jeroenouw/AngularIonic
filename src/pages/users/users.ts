@@ -14,7 +14,8 @@ export class UsersPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private guProvider: GithubUsersProvider) {
+              private guProvider: GithubUsersProvider) 
+  {
     this.guProvider.getUsers()
       .subscribe(
         users => { this.users = users; })
