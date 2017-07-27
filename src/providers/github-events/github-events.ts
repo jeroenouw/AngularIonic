@@ -17,6 +17,12 @@ export class GithubEventsProvider {
       .get(`${this.baseUrl}/events`)
       .catch(this.handleError);
   }  
+
+  getEventDetails(login: any): Observable<any> {
+    return this.http
+      .get(`${this.baseUrl}/users/${login}/events`)
+      .catch(this.handleError);
+  }
     
   private handleError (error: any) {
     const errMsg = (error.message) ? error.message :

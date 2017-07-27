@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { User } from '../../models/user.model';
 import { GithubUsersProvider } from '../../providers/github-users/github-users';
-import { UserDetailsPage } from '../user-details/user-details';
+import { UserDetailsPage } from './user-details/user-details';
 
 @Component({
   selector: 'page-users',

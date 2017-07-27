@@ -11,11 +11,11 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let event of events">
+    <button ion-item *ngFor="let event of events" (click)="goToDetails(event.actor.login)">
       <ion-avatar item-left>
         <img [src]="event.actor.avatar_url">
       </ion-avatar>
-      <h2>{{ event.id }}</h2>
+      <h3>{{ event.repo.name }}</h3><h3>{{ event.type }}</h3>
       <ion-icon name="arrow-forward" item-right></ion-icon>
     </button>
   </ion-list>

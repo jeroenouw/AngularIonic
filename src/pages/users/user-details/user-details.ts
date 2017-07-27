@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { User } from '../../models/user.model';
-import { GithubUsersProvider } from '../../providers/github-users/github-users';
+import { User } from '../../../models/user.model';
+import { GithubUsersProvider } from '../../../providers/github-users/github-users';
 
 @Component({
   selector: 'page-user-details',

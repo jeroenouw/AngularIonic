@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { Event } from '../../models/event.model';
 import { GithubEventsProvider } from '../../providers/github-events/github-events';
+import { EventDetailsPage } from './event-details/event-details';
 
 @Component({
   selector: 'page-events',
   templateUrl: 'events.html',
 })
 export class EventsPage {
-  events: any[];
+  events: Event[];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -18,6 +20,10 @@ export class EventsPage {
       .subscribe(events => { 
         this.events = events;  
       })
+  }
+      
+  goToDetails(login: string) {
+    this.navCtrl.push(EventDetailsPage, {login});
   }
 
 }
