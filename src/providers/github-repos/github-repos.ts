@@ -1,18 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Rx';
 
-/*
-  Generated class for the GithubReposProvider provider.
+import 'rxjs/add/operator/catch';
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular DI.
-*/
 @Injectable()
 export class GithubReposProvider {
 
-  constructor(public http: Http) {
-    console.log('Hello GithubReposProvider Provider');
-  }
+  baseUrl = 'https://api.github.com';
 
+  constructor(public http: HttpClient) {
+  }
+  
+  getRepos(): Observable<any[]> {
+    return this.http
+      .get(`${this.baseUrl}/repos/jeroenouw/angularionic`)
+      .catch(this.handleError);
+  }  
+
+  private handleError (error: any) {
+    const errMsg = (error.message) ? error.message :
+      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+    console.error(errMsg);
+    return Observable.throw(errMsg);
+  }
 }

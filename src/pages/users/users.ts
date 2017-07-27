@@ -19,7 +19,8 @@ export class UsersPage {
   {
     this.guProvider.getUsers()
       .subscribe(users => { 
-        this.users = users; 
+        this.users = users;  
+        this.originalUsers = users;
       })
   }
   

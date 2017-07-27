@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations'
+import { EventsPage } from '../pages/events/events';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,7 +32,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Users', component: UsersPage },
       { title: 'Repos', component: ReposPage },
-      { title: 'Organisations', component: OrganisationsPage },  
+      { title: 'Organisations', component: OrganisationsPage }, 
+      { title: 'Events', component: EventsPage }, 
     ];
   }
 
