@@ -1,18 +1,45 @@
-<!--
-  Generated template for the ContactPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>contact</ion-title>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon> 
+    </button>
+    <ion-title>
+      Contact
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+  
+  <h3>Information</h3>
+  <ion-list inset>
+
+    <ion-item>
+      <ion-label>Your name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Your email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <h3>Opinion</h3>
+  <ion-list radio-group>
+
+    <ion-item>
+      <ion-label>App looks well</ion-label>
+      <ion-radio value="well"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>App is very basic</ion-label>
+      <ion-radio value="basic"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button outline>Send</button>
 
 </ion-content>
