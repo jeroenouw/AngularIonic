@@ -7,13 +7,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Angular Ionic mobile application</h3>
-  <p>
-    Simple app with REST API and observables to get information from the Github API.
-  </p>
+<ion-content class="page-home">
 
-  <button ion-button outline (click)="goTo()">Go to users page</button>
-  <button ion-button outline (click)="showImpression()">Impression</button>
-
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Use the menu to visit all the pages.</h2>
+      <button ion-button outline (click)="showImpression()">First impression</button>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
