@@ -8,7 +8,12 @@
 </ion-header>
 
 <ion-content padding>
-
-  <h3>Organizations view page</h3>
-
+  <ion-list>
+    <button ion-item *ngFor="let org of orgs">
+      <ion-avatar item-left>
+        <img [src]="org.avatar_url">
+      </ion-avatar>
+      <h3>{{ org.login}}</h3><h4>{{ org.id }}</h4>
+    </button>
+  </ion-list>
 </ion-content>
