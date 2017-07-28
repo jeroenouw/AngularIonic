@@ -5,6 +5,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ContactPage } from '../pages/contact/contact';
 
 import { UsersPage } from '../pages/users/users';
 import { UserDetailsPage } from '../pages/users/user-details/user-details';
@@ -27,6 +28,7 @@ import { GithubEventsProvider } from '../providers/github-events/github-events';
   declarations: [
     MyApp,
     HomePage,
+    ContactPage,
     UsersPage, UserDetailsPage,
     ReposPage,
     OrganisationsPage,
@@ -41,6 +43,7 @@ import { GithubEventsProvider } from '../providers/github-events/github-events';
   entryComponents: [
     MyApp,
     HomePage,
+    ContactPage,
     UsersPage, UserDetailsPage,
     ReposPage,
     OrganisationsPage,
