@@ -10,80 +10,36 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <img src="assets/01.png"/>
+  <ion-card *ngFor="let repo of repos">
+    <img [src]="repo.owner.avatar_url">
     <ion-card-content>
       <ion-card-title>
-        Angular 4, Material Design and Firebase
-        </ion-card-title>
+        <a [href]="repo.html_url">
+        {{ repo.full_name }}
+        </a>
+      </ion-card-title>
       <p>
-        Full stack starter app with Angular 4, Material Design and Firebase.
+        {{ repo.description }}
       </p>
     </ion-card-content>
     <ion-row no-padding>
       <ion-col>
-        <button ion-button clear small color="primary" icon-start>
+        <a ion-button clear small color="primary" icon-start [href]="repo.stargazers_url">
           <ion-icon name='star'></ion-icon>
-          Star
-        </button>
+          {{ repo.stargazers_count }}
+        </a>
       </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/02.png"/>
-    <ion-card-content>
-      <ion-card-title>
-        Angular 4 and Ionic
-        </ion-card-title>
-      <p>
-        Angular Ionic mobile application.
-      </p>
-    </ion-card-content>
-    <ion-row no-padding>
       <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Star
-        </button>
+        <a ion-button clear small color="primary" icon-start [href]="repo.forks_url">
+          <ion-icon name='git-network'></ion-icon>
+          {{ repo.forks_count }}
+        </a>
       </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/03.png"/>
-    <ion-card-content>
-      <ion-card-title>
-        Angular REST
-        </ion-card-title>
-      <p>
-        Angular REST API example with observables.
-      </p>
-    </ion-card-content>
-    <ion-row no-padding>
       <ion-col>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Star
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="primary" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
+        <a ion-button clear small color="primary" icon-start [href]="repo.language_url">
+          <ion-icon name='globe'></ion-icon>
+          {{ repo.language }}
+        </a>
       </ion-col>
     </ion-row>
   </ion-card>
