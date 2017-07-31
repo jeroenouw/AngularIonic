@@ -14,9 +14,9 @@ This project is just for my portfolio and also still in progress.
 ## Quick start
 First clone this repo: `git clone https://github.com/jeroenouw/AngularIonic.git`.  
 Change directory to this project  
-Run `npm install -g cordova ionic` to install the CLI globally.
-Run  `npm install` to install all the dependencies.  
-Run `ionic serve` to run this project.  
+Run `npm install -g cordova ionic` to install the CLI globally.  
+Run `npm install` to install all the dependencies.  
+Run `ionic serve` or `ionic serve -l` to run this project.  
 Navigate to `http://localhost:8100/`. The app will automatically reload/build if you change any of the source files.  
 
 The build can be found in the `www` folder.
